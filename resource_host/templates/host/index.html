@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+  <head>
+    {% block title %}<title>{{title_index}}</title>{% endblock %}
+  </head>
+  <body>
+    <main>
+        <div class="container">
+          <h1>{{title_index}}</h1>
+              <ul>
+                <li>
+                  Автор: {{ host.host_owner }}
+                </li>
+                <li>
+                  Дата публикации: {{ host.last_modified}}
+                </li>
+              </ul>
+              <p>{{ host.id }}</p>
+              <a href="{% url host.port %}"></a>
+        </div>
+    </main>
+  </body>
+</html>
